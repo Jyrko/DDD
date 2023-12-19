@@ -1,4 +1,6 @@
-({
+const db = require('../db.js');
+
+module.exports = {
   async read(id) {
     return await db('users').read(id, ['id', 'login']);
   },
@@ -21,4 +23,4 @@
     const sql = 'SELECT login from users where login like $1';
     return await db('users').query(sql, [mask]);
   },
-});
+};

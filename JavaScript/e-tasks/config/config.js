@@ -4,7 +4,9 @@ module.exports = {
     api: {
         port: 8001,
         path: './api',
-        transport: 'ws', // http or ws
+        transport: 'http', // http or ws
+        framework: 'native', // native or fastify
+        logger: 'pino' // custom or pino
     },
     static: {
         port: 8000,
